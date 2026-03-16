@@ -372,6 +372,26 @@
     ]
   },
   {
+    "title": "bob020416/wosac-paper-tracker",
+    "source": "github",
+    "url": "https://github.com/bob020416/wosac-paper-tracker",
+    "published": "2026-03-16",
+    "authors": [
+      "bob020416"
+    ],
+    "abstract": "",
+    "raw_topics": [
+      "wosac"
+    ],
+    "relevance_score": 8,
+    "quality_score": 0,
+    "keep": true,
+    "notes": [
+      "github stars: 0",
+      "matched query: WOSAC"
+    ]
+  },
+  {
     "title": "SceneDiffuser++: City-Scale Traffic Simulation via a Generative World Model",
     "source": "waymo",
     "url": "https://waymo.com/research/scenediffuser-city-scale-traffic-simulation-via-a-generative-world-model/",
