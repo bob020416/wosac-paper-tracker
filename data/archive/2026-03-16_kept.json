@@ -1,29 +1,9 @@
 [
   {
-    "title": "The Waymo Open Sim Agents Challenge",
-    "source": "waymo",
-    "url": "https://waymo.com/research/the-waymo-open-sim-agents-challenge/",
-    "published": null,
-    "authors": [],
-    "abstract": "",
-    "raw_topics": [
-      "waymo open sim agents challenge",
-      "sim agents",
-      "waymo"
-    ],
-    "relevance_score": 16,
-    "quality_score": 2,
-    "keep": true,
-    "notes": [
-      "direct simulation keyword match",
-      "mentions Waymo",
-      "official Waymo research source"
-    ]
-  },
-  {
     "title": "Longzhong-Lin/UniMM",
     "source": "github",
     "url": "https://github.com/Longzhong-Lin/UniMM",
+    "published_at": "2026-03-14T00:12:08Z",
     "published": "2026-03-14",
     "authors": [
       "Longzhong-Lin"
@@ -47,6 +27,7 @@
     "title": "Zero-Shot Cross-City Generalization in End-to-End Autonomous Driving: Self-Supervised versus Supervised Representations",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2603.11417v1",
+    "published_at": "2026-03-12T01:19:32Z",
     "published": "2026-03-12",
     "authors": [
       "Fatemeh Naeinian",
@@ -78,6 +59,7 @@
     "title": "KnowDiffuser: A Knowledge-Guided Diffusion Planner with LM Reasoning and Prior-Informed Trajectory Initialization",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2603.10441v1",
+    "published_at": "2026-03-11T05:45:29Z",
     "published": "2026-03-11",
     "authors": [
       "Fan Ding",
@@ -110,6 +92,7 @@
     "title": "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2603.08113v1",
+    "published_at": "2026-03-09T08:54:03Z",
     "published": "2026-03-09",
     "authors": [
       "Zihan You",
@@ -142,6 +125,7 @@
     "title": "CarPLAN: Context-Adaptive and Robust Planning with Dynamic Scene Awareness for Autonomous Driving",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2603.12607v1",
+    "published_at": "2026-03-13T03:22:32Z",
     "published": "2026-03-13",
     "authors": [
       "Junyong Yun",
@@ -174,6 +158,7 @@
     "title": "PC-Diffuser: Path-Consistent Capsule CBF Safety Filtering for Diffusion-Based Trajectory Planner",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2603.10330v1",
+    "published_at": "2026-03-11T01:52:56Z",
     "published": "2026-03-11",
     "authors": [
       "Eugene Ku",
@@ -201,6 +186,7 @@
     "title": "Risk-Controllable Multi-View Diffusion for Driving Scenario Generation",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2603.11534v1",
+    "published_at": "2026-03-12T04:44:12Z",
     "published": "2026-03-12",
     "authors": [
       "Hongyi Lin",
@@ -232,6 +218,7 @@
     "title": "EvoDriveVLA: Evolving Autonomous Driving Vision-Language-Action Model via Collaborative Perception-Planning Distillation",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2603.09465v1",
+    "published_at": "2026-03-10T10:19:07Z",
     "published": "2026-03-10",
     "authors": [
       "Jiajun Cao",
@@ -269,6 +256,7 @@
     "title": "Composing Driving Worlds through Disentangled Control for Adversarial Scenario Generation",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2603.12864v1",
+    "published_at": "2026-03-13T10:10:21Z",
     "published": "2026-03-13",
     "authors": [
       "Yifan Zhan",
@@ -303,6 +291,7 @@
     "title": "GimpelZhang/GaussianRPG",
     "source": "github",
     "url": "https://github.com/GimpelZhang/GaussianRPG",
+    "published_at": "2026-03-14T14:08:29Z",
     "published": "2026-03-14",
     "authors": [
       "GimpelZhang"
@@ -327,6 +316,7 @@
     "title": "PJLab-ADG/DriveArena",
     "source": "github",
     "url": "https://github.com/PJLab-ADG/DriveArena",
+    "published_at": "2026-03-11T06:53:10Z",
     "published": "2026-03-11",
     "authors": [
       "PJLab-ADG"
@@ -350,6 +340,7 @@
     "title": "STADA: Specification-based Testing for Autonomous Driving Agents",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2603.10940v1",
+    "published_at": "2026-03-11T16:26:20Z",
     "published": "2026-03-11",
     "authors": [
       "Joy Saha",
@@ -375,6 +366,7 @@
     "title": "bob020416/wosac-paper-tracker",
     "source": "github",
     "url": "https://github.com/bob020416/wosac-paper-tracker",
+    "published_at": "2026-03-16T02:56:51Z",
     "published": "2026-03-16",
     "authors": [
       "bob020416"
@@ -387,44 +379,8 @@
     "quality_score": 0,
     "keep": true,
     "notes": [
-      "github stars: 0",
+      "github stars: 1",
       "matched query: WOSAC"
-    ]
-  },
-  {
-    "title": "SceneDiffuser++: City-Scale Traffic Simulation via a Generative World Model",
-    "source": "waymo",
-    "url": "https://waymo.com/research/scenediffuser-city-scale-traffic-simulation-via-a-generative-world-model/",
-    "published": null,
-    "authors": [],
-    "abstract": "",
-    "raw_topics": [
-      "traffic simulation"
-    ],
-    "relevance_score": 6,
-    "quality_score": 2,
-    "keep": true,
-    "notes": [
-      "direct simulation keyword match",
-      "official Waymo research source"
-    ]
-  },
-  {
-    "title": "SceneDiffuser: Efficient and Controllable Driving Simulation Initialization and Rollout",
-    "source": "waymo",
-    "url": "https://waymo.com/research/scenediffuser-efficient-and-controllable-driving-simulation-initialization/",
-    "published": null,
-    "authors": [],
-    "abstract": "",
-    "raw_topics": [
-      "driving simulation"
-    ],
-    "relevance_score": 6,
-    "quality_score": 2,
-    "keep": true,
-    "notes": [
-      "direct simulation keyword match",
-      "official Waymo research source"
     ]
   }
 ]

@@ -102,6 +102,7 @@ class Item:
     title: str
     source: str
     url: str
+    published_at: str | None
     published: str | None
     authors: list[str]
     abstract: str
@@ -134,6 +135,21 @@ def normalize_text(text: str) -> str:
     return text.strip()
 
 
+def to_iso_datetime(value: str | None) -> str | None:
+    if not value:
+        return None
+    value = value.strip()
+    for fmt in ("%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%dT%H:%M:%S%z"):
+        try:
+            parsed = dt.datetime.strptime(value, fmt)
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=dt.timezone.utc)
+            return parsed.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z")
+        except ValueError:
+            continue
+    return None
+
+
 def to_iso_date(value: str | None) -> str | None:
     if not value:
         return None
@@ -156,6 +172,14 @@ def is_recent(date_str: str | None, *, today: dt.date | None = None) -> bool:
     reference = today or dt.date.today()
     age_days = (reference - published).days
     return 0 <= age_days <= MAX_DAYS
+
+
+def has_precise_timestamp(value: str | None) -> bool:
+    return to_iso_datetime(value) is not None
+
+
+def sort_key(item: Item) -> tuple[int, str]:
+    return (item.relevance_score + item.quality_score, item.published_at or "")
 
 
 def collect_topics(text: str) -> tuple[int, list[str], list[str]]:
@@ -239,9 +263,11 @@ def fetch_arxiv(max_results_per_query: int = 20) -> list[Item]:
             abstract = normalize_text(entry.get("summary", ""))
             authors = [a.get("name", "") for a in entry.get("authors", [])]
             url = entry.get("link", "")
-            published = to_iso_date(entry.get("published"))
+            published_raw = entry.get("published")
+            published_at = to_iso_datetime(published_raw)
+            published = to_iso_date(published_raw)
 
-            if published and not is_recent(published):
+            if not published_at or not published or not is_recent(published):
                 continue
 
             relevance_score, topics, notes = collect_topics(f"{title}\n{abstract}")
@@ -253,6 +279,7 @@ def fetch_arxiv(max_results_per_query: int = 20) -> list[Item]:
                     title=title,
                     source="arxiv",
                     url=url,
+                    published_at=published_at,
                     published=published,
                     authors=authors,
                     abstract=abstract,
@@ -291,10 +318,12 @@ def fetch_github(max_results_per_query: int = 10) -> list[Item]:
             description = normalize_text(repo.get("description", ""))
             authors = [repo.get("owner", {}).get("login", "")]
             url = repo.get("html_url", "")
-            published = to_iso_date(repo.get("updated_at"))
+            updated_raw = repo.get("updated_at")
+            published_at = to_iso_datetime(updated_raw)
+            published = to_iso_date(updated_raw)
             stars = int(repo.get("stargazers_count", 0))
 
-            if published and not is_recent(published):
+            if not published_at or not published or not is_recent(published):
                 continue
 
             text = f"{title}\n{description}"
@@ -307,6 +336,7 @@ def fetch_github(max_results_per_query: int = 10) -> list[Item]:
                     title=title,
                     source="github",
                     url=url,
+                    published_at=published_at,
                     published=published,
                     authors=authors,
                     abstract=description,
@@ -357,6 +387,7 @@ def fetch_waymo_research(limit: int = 40) -> list[Item]:
                 title=title,
                 source="waymo",
                 url=href,
+                published_at=None,
                 published=None,
                 authors=[],
                 abstract="",
@@ -390,7 +421,7 @@ def dedupe_items(items: Iterable[Item]) -> list[Item]:
             best_by_key[key] = item
 
     out = list(best_by_key.values())
-    out.sort(key=lambda x: ((x.relevance_score + x.quality_score), x.published or ""), reverse=True)
+    out.sort(key=sort_key, reverse=True)
     return out
 
 
@@ -406,6 +437,7 @@ def save_csv(items: list[Item], path: Path) -> None:
         "title",
         "source",
         "url",
+        "published_at",
         "published",
         "authors",
         "abstract",
@@ -437,6 +469,7 @@ def save_weekly_report(items: list[Item], path: Path, report_date: str) -> None:
                     f"### {index}. {item.title}",
                     f"- Source: {item.source}",
                     f"- Date: {item.published or 'unknown'}",
+                    f"- Time: {item.published_at or 'unknown'}",
                     f"- Relevance score: {item.relevance_score}",
                     f"- Quality score: {item.quality_score}",
                     f"- Topics: {', '.join(item.raw_topics) if item.raw_topics else 'n/a'}",
@@ -461,7 +494,8 @@ def main() -> None:
 
     print("[4/4] Merging and filtering...")
     all_items = dedupe_items(arxiv_items + github_items + waymo_items)
-    kept_items = [item for item in all_items if item.keep]
+    kept_items = [item for item in all_items if item.keep and has_precise_timestamp(item.published_at)]
+    kept_items = kept_items[:30]
 
     latest_json = DATA_DIR / "latest_kept.json"
     latest_csv = DATA_DIR / "latest_kept.csv"
