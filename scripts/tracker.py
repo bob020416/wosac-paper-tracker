@@ -483,17 +483,11 @@ def save_weekly_report(items: list[Item], path: Path, report_date: str) -> None:
 def main() -> None:
     today = dt.date.today().isoformat()
 
-    print("[1/4] Fetching arXiv...")
+    print("[1/2] Fetching arXiv...")
     arxiv_items = fetch_arxiv(max_results_per_query=15)
 
-    print("[2/4] Fetching GitHub...")
-    github_items = fetch_github(max_results_per_query=8)
-
-    print("[3/4] Fetching Waymo research...")
-    waymo_items = fetch_waymo_research(limit=50)
-
-    print("[4/4] Merging and filtering...")
-    all_items = dedupe_items(arxiv_items + github_items + waymo_items)
+    print("[2/2] Merging and filtering...")
+    all_items = dedupe_items(arxiv_items)
     kept_items = [item for item in all_items if item.keep and has_precise_timestamp(item.published_at)]
     kept_items = kept_items[:30]
 

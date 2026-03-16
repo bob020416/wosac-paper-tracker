@@ -1,29 +1,5 @@
 [
   {
-    "title": "Longzhong-Lin/UniMM",
-    "source": "github",
-    "url": "https://github.com/Longzhong-Lin/UniMM",
-    "published_at": "2026-03-14T00:12:08Z",
-    "published": "2026-03-14",
-    "authors": [
-      "Longzhong-Lin"
-    ],
-    "abstract": "[WOSAC 2025] Revisit Mixture Models for Multi-Agent Simulation: Experimental Study within a Unified Framework",
-    "raw_topics": [
-      "wosac",
-      "multi-agent simulation"
-    ],
-    "relevance_score": 13,
-    "quality_score": 3,
-    "keep": true,
-    "notes": [
-      "quality hint: experiment",
-      "GitHub repo has 10+ stars",
-      "github stars: 22",
-      "matched query: WOSAC"
-    ]
-  },
-  {
     "title": "Zero-Shot Cross-City Generalization in End-to-End Autonomous Driving: Self-Supervised versus Supervised Representations",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2603.11417v1",
@@ -288,55 +264,6 @@
     ]
   },
   {
-    "title": "GimpelZhang/GaussianRPG",
-    "source": "github",
-    "url": "https://github.com/GimpelZhang/GaussianRPG",
-    "published_at": "2026-03-14T14:08:29Z",
-    "published": "2026-03-14",
-    "authors": [
-      "GimpelZhang"
-    ],
-    "abstract": "3D Gaussian Rendering PlayGround: an open-source autonomous driving closed-loop simulator demo using 3D Gaussian Splatting tech",
-    "raw_topics": [
-      "closed-loop",
-      "autonomous driving"
-    ],
-    "relevance_score": 7,
-    "quality_score": 3,
-    "keep": true,
-    "notes": [
-      "mentions closed-loop evaluation",
-      "quality hint: simulator",
-      "GitHub repo has 50+ stars",
-      "github stars: 182",
-      "matched query: \"closed-loop\" autonomous driving simulation"
-    ]
-  },
-  {
-    "title": "PJLab-ADG/DriveArena",
-    "source": "github",
-    "url": "https://github.com/PJLab-ADG/DriveArena",
-    "published_at": "2026-03-11T06:53:10Z",
-    "published": "2026-03-11",
-    "authors": [
-      "PJLab-ADG"
-    ],
-    "abstract": "DriveArena: A Closed-loop Generative Simulation Platform for Autonomous Driving",
-    "raw_topics": [
-      "closed-loop",
-      "autonomous driving"
-    ],
-    "relevance_score": 7,
-    "quality_score": 3,
-    "keep": true,
-    "notes": [
-      "mentions closed-loop evaluation",
-      "GitHub repo has 200+ stars",
-      "github stars: 438",
-      "matched query: \"closed-loop\" autonomous driving simulation"
-    ]
-  },
-  {
     "title": "STADA: Specification-based Testing for Autonomous Driving Agents",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2603.10940v1",
@@ -360,27 +287,6 @@
       "quality hint: evaluation",
       "arXiv preprint accepted by preference",
       "matched query: all:\"scenario generation\" AND all:\"autonomous driving\""
-    ]
-  },
-  {
-    "title": "bob020416/wosac-paper-tracker",
-    "source": "github",
-    "url": "https://github.com/bob020416/wosac-paper-tracker",
-    "published_at": "2026-03-16T02:56:51Z",
-    "published": "2026-03-16",
-    "authors": [
-      "bob020416"
-    ],
-    "abstract": "",
-    "raw_topics": [
-      "wosac"
-    ],
-    "relevance_score": 8,
-    "quality_score": 0,
-    "keep": true,
-    "notes": [
-      "github stars: 1",
-      "matched query: WOSAC"
     ]
   }
 ]
