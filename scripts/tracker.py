@@ -31,7 +31,6 @@ WAYMO_RESEARCH_URL = "https://waymo.com/research/"
 ARXIV_SLEEP_SECONDS = 3
 REQUEST_TIMEOUT = 30
 USER_AGENT = "wosac-research-tracker/0.1 (contact: bob020416@gmail.com)"
-MAX_DAYS = 7
 
 TOPIC_KEYWORDS = {
     "wosac": 8,
@@ -162,18 +161,6 @@ def to_iso_date(value: str | None) -> str | None:
     return value[:10]
 
 
-def is_recent(date_str: str | None, *, today: dt.date | None = None) -> bool:
-    if not date_str:
-        return False
-    try:
-        published = dt.date.fromisoformat(date_str)
-    except ValueError:
-        return False
-    reference = today or dt.date.today()
-    age_days = (reference - published).days
-    return 0 <= age_days <= MAX_DAYS
-
-
 def has_precise_timestamp(value: str | None) -> bool:
     return to_iso_datetime(value) is not None
 
@@ -267,7 +254,7 @@ def fetch_arxiv(max_results_per_query: int = 20) -> list[Item]:
             published_at = to_iso_datetime(published_raw)
             published = to_iso_date(published_raw)
 
-            if not published_at or not published or not is_recent(published):
+            if not published_at or not published:
                 continue
 
             relevance_score, topics, notes = collect_topics(f"{title}\n{abstract}")
@@ -323,7 +310,7 @@ def fetch_github(max_results_per_query: int = 10) -> list[Item]:
             published = to_iso_date(updated_raw)
             stars = int(repo.get("stargazers_count", 0))
 
-            if not published_at or not published or not is_recent(published):
+            if not published_at or not published:
                 continue
 
             text = f"{title}\n{description}"
