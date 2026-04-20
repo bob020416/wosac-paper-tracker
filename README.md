@@ -12,6 +12,7 @@
 ## Weekly updates
 
 <!-- WEEKLY_UPDATES_START -->
+- 2026-04-20: [weekly report](reports/2026-04-20.md)
 - 2026-04-13: [weekly report](reports/2026-04-13.md)
 - 2026-04-06: [weekly report](reports/2026-04-06.md)
 - 2026-03-23: [weekly report](reports/2026-03-23.md)
