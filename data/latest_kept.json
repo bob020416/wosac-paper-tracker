@@ -939,39 +939,6 @@
     ]
   },
   {
-    "title": "OneFixer: High-Quality and Consistent One-Step Autoregressive 3DGS Refinement for Driving Scenes",
-    "source": "arxiv",
-    "url": "https://arxiv.org/abs/2609.32175v1",
-    "published_at": "2026-09-26T02:53:32Z",
-    "published": "2026-09-26",
-    "authors": [
-      "Boseong Jeon",
-      "Junhyeop Lee",
-      "Juhan Cha",
-      "Hayoung Kim"
-    ],
-    "abstract": "Autoregressive video diffusion is a promising render-time fixer for 3D Gaussian Splatting (3DGS) in autonomous-driving simulation, but deployment demands high visual quality and temporal consistency at low latency. This is especially hard for one-step causal generation, where each imperfect prediction immediately becomes context for subsequent frames. Existing approaches stabilize rollouts through staged training with multiple modules and rollout-aware regularization, yet one-step quality still falls short of what deployment requires. We introduce OneFixer, a one-step autoregressive video-diffusion fixer trained in a single task-specific adaptation stage. Our key idea is a deployment-matched shared rollout: the model's own one-step predictions serve as the causal context for flow matching, exposing training to deployment-time errors, while the same rollout receives direct pixel-space perceptual supervision to preserve fine detail. Because the predictions optimized for current-frame quality are exactly those reused as future context, fidelity and autoregressive robustness are learned jointly, without bidirectional-to-causal conversion or teacher-student distillation. OneFixer further exploits cues that driving simulation readily provides, lane geometry and dynamic-agent states, to improve geometric fidelity. On Waymo and proprietary driving scenes with 900-frame rollouts, OneFixer achieves the lowest FVD, LPIPS, and DISTS among all baselines at one step, with temporal consistency matching or exceeding multi-stage DMD pipelines. Under identical backbone and conditioning, it matches a multi-stage DMD-with-Self-Forcing pipeline in under half the GPU-hours and keeps improving beyond its plateau. In closed-loop simulation with a driving policy, OneFixer reduces the collision rate by a third relative to raw 3DGS rendering. Project page: https://onefixer-web.vercel.app/",
-    "raw_topics": [
-      "driving simulation",
-      "closed-loop",
-      "diffusion",
-      "collision",
-      "waymo"
-    ],
-    "relevance_score": 17,
-    "quality_score": 2,
-    "keep": true,
-    "notes": [
-      "direct simulation keyword match",
-      "mentions Waymo",
-      "mentions closed-loop evaluation",
-      "mentions simulation safety metrics",
-      "quality hint: collision",
-      "arXiv preprint accepted by preference",
-      "matched query: all:\"closed-loop\" AND all:\"autonomous driving\""
-    ]
-  },
-  {
     "title": "One Diffusion Model, Two Roles: Guided Trajectory Planning and Safety-Critical Scenario Generation in Closed-Loop Simulation",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2609.04921v1",
@@ -1034,6 +1001,45 @@
       "mentions closed-loop evaluation",
       "mentions simulation safety metrics",
       "quality hint: ablation",
+      "quality hint: collision",
+      "arXiv preprint accepted by preference",
+      "matched query: all:\"scenario generation\" AND all:\"autonomous driving\""
+    ]
+  },
+  {
+    "title": "End-to-end Conditional Diffusion for Realistic and Controllable Visual Traffic Scenario Generation",
+    "source": "arxiv",
+    "url": "https://arxiv.org/abs/2607.18637v1",
+    "published_at": "2026-07-21T02:13:25Z",
+    "published": "2026-07-21",
+    "authors": [
+      "Jingzheng Li",
+      "Yufei Ge",
+      "Zhijun Chen",
+      "Qianren Mao",
+      "Zizhe Wang",
+      "Binhang Qi",
+      "Bing Li",
+      "Keyu Chen",
+      "Baochang Zhang",
+      "Xianglong Liu",
+      "Philip S Yu"
+    ],
+    "abstract": "Generating closed-loop traffic scenarios that are both realistic and controllable is crucial for evaluating autonomous driving systems, especially under rare safety-critical interactions. Existing learning-based methods often struggle to balance controllability and realism, offering either limited fine-grained control over traffic behavior or controllable scenarios at the expense of behavioral plausibility. This paper presents E2E-CDiff, an end-to-end conditional diffusion framework for controllable and realistic scenario generation. Conditioned on front-view visual observations, E2E-CDiff jointly denoises future motion states and executable low-level controls for route-interacting background vehicles. This unified state-action generation mitigates the planning-control mismatch in conventional two-stage trajectory-then-controller pipelines. Differentiable guidance further regulates speed, enforces drivable-area compliance, and supports collision-avoidance or collision-seeking behaviors, enabling both naturalistic and safety-critical scenario generation. Experiments on Bench2Drive show that E2E-CDiff achieves a favorable controllability-realism trade-off compared with representative reinforcement- and imitation-learning baselines, while its collision-guided variant induces challenging interactions across multiple autonomous driving systems. E2E-CDiff also performs competitively as a learning-based ego planner, demonstrating the generality of end-to-end state-action diffusion.",
+    "raw_topics": [
+      "closed-loop",
+      "scenario generation",
+      "diffusion",
+      "collision",
+      "autonomous driving"
+    ],
+    "relevance_score": 15,
+    "quality_score": 4,
+    "keep": true,
+    "notes": [
+      "mentions closed-loop evaluation",
+      "mentions simulation safety metrics",
+      "quality hint: experiment",
       "quality hint: collision",
       "arXiv preprint accepted by preference",
       "matched query: all:\"scenario generation\" AND all:\"autonomous driving\""
