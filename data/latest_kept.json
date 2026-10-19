@@ -39,6 +39,44 @@
     ]
   },
   {
+    "title": "SHRED: Self-Play for Heterogeneous Road-Users without Expert Demonstrations",
+    "source": "arxiv",
+    "url": "https://arxiv.org/abs/2610.20866v1",
+    "published_at": "2026-10-14T19:56:13Z",
+    "published": "2026-10-14",
+    "authors": [
+      "Wei-Jer Chang",
+      "Zhouchonghao Wu",
+      "Akshay Rangesh",
+      "Weixin Li",
+      "Masayoshi Tomizuka",
+      "Wei Zhan"
+    ],
+    "abstract": "Realistic traffic simulation and autonomous planning both depend on modeling interactions among heterogeneous road users whose dynamics, constraints, and behaviors differ fundamentally. Existing approaches predominantly learn realistic interaction behavior from large-scale human driving demonstrations. In this work, we ask whether such behavior can instead emerge purely through self-play. We present SHRED, a framework that jointly trains vehicles, pedestrians, and cyclists through large-scale heterogeneous self-play from random initialization, without demonstrations or logged-trajectory replay. SHRED combines type-specific dynamics and objectives with procedural scenario generation and per-agent randomization, allowing diverse behaviors to emerge through closed-loop interaction. On the Waymo Open Sim Agents Challenge (WOSAC), SHRED jointly controls all three road-user types and outperforms both the closest demonstration-free self-play baseline and prior self-play methods that use demonstration-trained reference policies. Policies trained only on nuPlan map geometry retain comparable realism under zero-shot evaluation on Waymo. For planning, SHRED outperforms all compared planners on the interaction-heavy InterPlan benchmark. Controlled ablations show that heterogeneity in self-play improves both traffic realism and planning performance, with particularly large planning gains in interaction-heavy scenarios. Together, these results establish heterogeneous procedural self-play as a scalable, demonstration-free paradigm for learning realistic and interactive traffic behavior.",
+    "raw_topics": [
+      "wosac",
+      "waymo open sim agents challenge",
+      "sim agents",
+      "traffic simulation",
+      "closed-loop",
+      "scenario generation",
+      "waymo"
+    ],
+    "relevance_score": 39,
+    "quality_score": 7,
+    "keep": true,
+    "notes": [
+      "direct simulation keyword match",
+      "mentions Waymo",
+      "mentions closed-loop evaluation",
+      "quality hint: benchmark",
+      "quality hint: evaluation",
+      "quality hint: ablation",
+      "arXiv preprint accepted by preference",
+      "matched query: all:\"WOSAC\""
+    ]
+  },
+  {
     "title": "Advancing Multi-agent Traffic Simulation via R1-Style Reinforcement Fine-Tuning",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2509.23993v2",
@@ -935,7 +973,7 @@
       "quality hint: evaluation",
       "quality hint: collision",
       "arXiv preprint accepted by preference",
-      "matched query: all:\"closed-loop\" AND all:\"autonomous driving\""
+      "matched query: all:\"scenario generation\" AND all:\"autonomous driving\""
     ]
   },
   {
@@ -1001,45 +1039,6 @@
       "mentions closed-loop evaluation",
       "mentions simulation safety metrics",
       "quality hint: ablation",
-      "quality hint: collision",
-      "arXiv preprint accepted by preference",
-      "matched query: all:\"scenario generation\" AND all:\"autonomous driving\""
-    ]
-  },
-  {
-    "title": "End-to-end Conditional Diffusion for Realistic and Controllable Visual Traffic Scenario Generation",
-    "source": "arxiv",
-    "url": "https://arxiv.org/abs/2607.18637v1",
-    "published_at": "2026-07-21T02:13:25Z",
-    "published": "2026-07-21",
-    "authors": [
-      "Jingzheng Li",
-      "Yufei Ge",
-      "Zhijun Chen",
-      "Qianren Mao",
-      "Zizhe Wang",
-      "Binhang Qi",
-      "Bing Li",
-      "Keyu Chen",
-      "Baochang Zhang",
-      "Xianglong Liu",
-      "Philip S Yu"
-    ],
-    "abstract": "Generating closed-loop traffic scenarios that are both realistic and controllable is crucial for evaluating autonomous driving systems, especially under rare safety-critical interactions. Existing learning-based methods often struggle to balance controllability and realism, offering either limited fine-grained control over traffic behavior or controllable scenarios at the expense of behavioral plausibility. This paper presents E2E-CDiff, an end-to-end conditional diffusion framework for controllable and realistic scenario generation. Conditioned on front-view visual observations, E2E-CDiff jointly denoises future motion states and executable low-level controls for route-interacting background vehicles. This unified state-action generation mitigates the planning-control mismatch in conventional two-stage trajectory-then-controller pipelines. Differentiable guidance further regulates speed, enforces drivable-area compliance, and supports collision-avoidance or collision-seeking behaviors, enabling both naturalistic and safety-critical scenario generation. Experiments on Bench2Drive show that E2E-CDiff achieves a favorable controllability-realism trade-off compared with representative reinforcement- and imitation-learning baselines, while its collision-guided variant induces challenging interactions across multiple autonomous driving systems. E2E-CDiff also performs competitively as a learning-based ego planner, demonstrating the generality of end-to-end state-action diffusion.",
-    "raw_topics": [
-      "closed-loop",
-      "scenario generation",
-      "diffusion",
-      "collision",
-      "autonomous driving"
-    ],
-    "relevance_score": 15,
-    "quality_score": 4,
-    "keep": true,
-    "notes": [
-      "mentions closed-loop evaluation",
-      "mentions simulation safety metrics",
-      "quality hint: experiment",
       "quality hint: collision",
       "arXiv preprint accepted by preference",
       "matched query: all:\"scenario generation\" AND all:\"autonomous driving\""
