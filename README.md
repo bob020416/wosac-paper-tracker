@@ -12,6 +12,7 @@
 ## Weekly updates
 
 <!-- WEEKLY_UPDATES_START -->
+- 2026-10-26: [weekly report](reports/2026-10-26.md)
 - 2026-10-19: [weekly report](reports/2026-10-19.md)
 - 2026-10-12: [weekly report](reports/2026-10-12.md)
 - 2026-10-05: [weekly report](reports/2026-10-05.md)
@@ -23,7 +24,6 @@
 - 2026-08-17: [weekly report](reports/2026-08-17.md)
 - 2026-08-10: [weekly report](reports/2026-08-10.md)
 - 2026-08-03: [weekly report](reports/2026-08-03.md)
-- 2026-07-20: [weekly report](reports/2026-07-20.md)
 <!-- WEEKLY_UPDATES_END -->
 
 ## Data

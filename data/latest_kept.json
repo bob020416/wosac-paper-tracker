@@ -77,6 +77,42 @@
     ]
   },
   {
+    "title": "Flow-ERD: Agent-type Aware Flow Matching With Entropy-Regularized Distillation for Diverse Traffic Simulation",
+    "source": "arxiv",
+    "url": "https://arxiv.org/abs/2607.06957v2",
+    "published_at": "2026-07-08T03:32:36Z",
+    "published": "2026-07-08",
+    "authors": [
+      "Seulbin Hwang",
+      "Kiyoung Om",
+      "Dae Jung Kim",
+      "Jinhan Lee"
+    ],
+    "abstract": "Realistic and diverse traffic simulation is essential to autonomous driving development. Yet prevailing benchmarks predominantly reward realism, and recent methods have optimized accordingly, leaving diversity underexplored. We introduce Flow-ERD, a multi-agent simulator that pursues realism and diversity jointly. Its backbone, Agent-Type Aware Flow Matching (AFM), couples flow matching's multi-modal expressiveness with type-specific kinematic execution. It preserves fine-grained diversity while keeping motions consistent with each agent type. A second stage, Entropy-Regularized Distillation (ERD), fine-tunes the closed-loop rollout distribution with an entropy-regularized reverse-KL objective. This mitigates closed-loop covariate shift while explicitly preventing collapse onto high-density modes. We evaluate Flow-ERD with Cross-Pair Diversity and its validity-gated variant alongside standard realism scores. Validation experiments further show that tuning entropy regularization recovers most of the pretrained backbone's diversity while retaining realism gains. Flow-ERD ranks first in test-split realism on the Waymo Open Sim Agents Challenge (WOSAC) and dominates the validation realism--diversity Pareto front among reproducible baselines.",
+    "raw_topics": [
+      "wosac",
+      "waymo open sim agents challenge",
+      "sim agents",
+      "traffic simulation",
+      "closed-loop",
+      "waymo",
+      "autonomous driving"
+    ],
+    "relevance_score": 37,
+    "quality_score": 6,
+    "keep": true,
+    "notes": [
+      "direct simulation keyword match",
+      "mentions Waymo",
+      "mentions closed-loop evaluation",
+      "quality hint: benchmark",
+      "quality hint: experiment",
+      "quality hint: simulator",
+      "arXiv preprint accepted by preference",
+      "matched query: all:\"WOSAC\""
+    ]
+  },
+  {
     "title": "Advancing Multi-agent Traffic Simulation via R1-Style Reinforcement Fine-Tuning",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2509.23993v2",
@@ -545,38 +581,6 @@
       "direct simulation keyword match",
       "mentions Waymo",
       "quality hint: leaderboard",
-      "arXiv preprint accepted by preference",
-      "matched query: all:\"WOSAC\""
-    ]
-  },
-  {
-    "title": "Flow-ERD: Agent-type Aware Flow Matching with Entropy-Regularized Distillation for Diverse Traffic Simulation",
-    "source": "arxiv",
-    "url": "https://arxiv.org/abs/2607.06957v1",
-    "published_at": "2026-07-08T03:32:36Z",
-    "published": "2026-07-08",
-    "authors": [
-      "Seulbin Hwang",
-      "Kiyoung Om",
-      "Daejung Kim",
-      "Jinhan Lee"
-    ],
-    "abstract": "Realistic and diverse traffic simulation is essential to autonomous driving development. Yet prevailing benchmarks predominantly reward realism, and recent methods have optimized accordingly, leaving diversity underexplored. We introduce \\textbf{Flow-ERD}, a multi-agent simulator that pursues realism and diversity jointly. Its backbone, \\textbf{Agent-Type Aware Flow Matching} (AFM), couples flow matching's multi-modal expressiveness with type-specific kinematic execution. It preserves fine-grained diversity while keeping motions consistent with each agent type. A second stage, \\textbf{Entropy-Regularized Distillation} (ERD), fine-tunes the closed-loop rollout distribution with an entropy-regularized reverse-KL objective. This mitigates covariate shift while explicitly preventing collapse onto high-density modes. We evaluate Flow-ERD with a log-free diversity metric alongside standard realism scores. Flow-ERD ranks first on the WOSAC test benchmark and dominates the realism--diversity Pareto front among reproducible baselines. Our project page is available \\href{https://seulbinhwang.github.io/flow-erd-project-page/}{here}.",
-    "raw_topics": [
-      "wosac",
-      "traffic simulation",
-      "closed-loop",
-      "autonomous driving"
-    ],
-    "relevance_score": 21,
-    "quality_score": 5,
-    "keep": true,
-    "notes": [
-      "direct simulation keyword match",
-      "mentions closed-loop evaluation",
-      "quality hint: benchmark",
-      "quality hint: github",
-      "quality hint: simulator",
       "arXiv preprint accepted by preference",
       "matched query: all:\"WOSAC\""
     ]
