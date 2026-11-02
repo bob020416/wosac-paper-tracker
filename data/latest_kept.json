@@ -218,39 +218,6 @@
     ]
   },
   {
-    "title": "AutoWorld: Learning Multi-Agent Traffic Simulation with Self-Supervised World Models",
-    "source": "arxiv",
-    "url": "https://arxiv.org/abs/2603.28963v2",
-    "published_at": "2026-03-30T20:10:21Z",
-    "published": "2026-03-30",
-    "authors": [
-      "Mozhgan Pourkeshavarz",
-      "Tianran Liu",
-      "Nicholas Rhinehart"
-    ],
-    "abstract": "Simulation with realistic traffic agents is essential for validating autonomous driving systems. Existing data-driven simulators learn agent behavior from higher-level abstractions such as 3D bounding boxes and polylines, inferred by upstream perception pipelines. These lossy abstractions discard sensory context that directly shapes agent behavior, limiting the distributional realism that simulation aims to reproduce. To address this limitation, we propose AutoWorld, a traffic simulation framework that grounds agent behavior in raw sensor observations through a self-supervised world model trained on LiDAR occupancy data. Given world model samples, AutoWorld constructs a coarse-to-fine predictive scene context as input to a multi-agent motion generation model. Furthermore, we designed a motion-aware latent supervision objective that enriches AutoWorld's latent representation of scene dynamics. To better exploit this latent space during inference, AutoWorld employs a cascaded Determinantal Point Process framework to guide diversity-aware sampling across both the world model and motion model. Experiments on the Waymo Sim Agents Challenge (WOSAC) demonstrate that AutoWorld achieves competitive performance, with larger gains in partially-observed scenarios where trajectory abstractions are most limited. We further show that grounding simulation in raw LiDAR through AutoWorld scales better with additional data than trajectory-only and LiDAR-conditioning baselines. Ablations confirm the contribution of each component.",
-    "raw_topics": [
-      "wosac",
-      "waymo sim agents",
-      "sim agents",
-      "traffic simulation",
-      "waymo",
-      "autonomous driving"
-    ],
-    "relevance_score": 31,
-    "quality_score": 6,
-    "keep": true,
-    "notes": [
-      "direct simulation keyword match",
-      "mentions Waymo",
-      "quality hint: experiment",
-      "quality hint: ablation",
-      "quality hint: simulator",
-      "arXiv preprint accepted by preference",
-      "matched query: all:\"WOSAC\""
-    ]
-  },
-  {
     "title": "SceneDiffuser: Efficient and Controllable Driving Simulation Initialization and Rollout",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2412.12129v1",
@@ -811,6 +778,39 @@
       "quality hint: dataset",
       "arXiv preprint accepted by preference",
       "matched query: all:\"diffusion\" AND all:\"traffic simulation\""
+    ]
+  },
+  {
+    "title": "AutoWorld: Learning Multi-Agent Traffic Simulation with Self-Supervised World Models",
+    "source": "arxiv",
+    "url": "https://arxiv.org/abs/2603.28963v3",
+    "published_at": "2026-03-30T20:10:21Z",
+    "published": "2026-03-30",
+    "authors": [
+      "Mozhgan Pourkeshavarz",
+      "Tianran Liu",
+      "Nicholas Rhinehart"
+    ],
+    "abstract": "Simulation with realistic traffic agents is essential for validating autonomous driving systems. Existing data-driven simulators learn agent behavior from higher-level abstractions such as 3D bounding boxes and polylines, inferred by upstream perception pipelines. These lossy abstractions discard sensory context that directly shapes agent behavior, limiting the distributional realism that simulation aims to reproduce. To address this limitation, we propose AutoWorld, a traffic simulation framework that grounds agent behavior in raw sensor observations through a self-supervised world model trained on LiDAR occupancy data. Given world model samples, AutoWorld constructs a coarse-to-fine predictive scene context as input to a multi-agent motion generation model. Furthermore, we designed a motion-aware latent supervision objective that enriches AutoWorld's latent representation of scene dynamics. To better exploit this latent space during inference, AutoWorld employs a cascaded Determinantal Point Process framework to guide diversity-aware sampling across both the world model and motion model. Experiments on nuPlan and Waymo demonstrate that AutoWorld improves generation realism, with larger gains in partially observed scenarios where trajectory abstractions are most limited, reducing collision rates by 36%. AutoWorld also remains physically plausible under planner-controlled ego behavior and supports controllable, diverse safety-critical scenario generation.",
+    "raw_topics": [
+      "traffic simulation",
+      "scenario generation",
+      "collision",
+      "waymo",
+      "autonomous driving"
+    ],
+    "relevance_score": 16,
+    "quality_score": 5,
+    "keep": true,
+    "notes": [
+      "direct simulation keyword match",
+      "mentions Waymo",
+      "mentions simulation safety metrics",
+      "quality hint: experiment",
+      "quality hint: simulator",
+      "quality hint: collision",
+      "arXiv preprint accepted by preference",
+      "matched query: all:\"traffic simulation\" AND all:\"autonomous driving\""
     ]
   },
   {
